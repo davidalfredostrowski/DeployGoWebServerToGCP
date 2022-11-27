@@ -1,0 +1,20 @@
+Three fixes to get my "GO" server to actually deploy !!!!!
+
+
+1.) port 8080 necessary for deployment to avoid 502 error on server
+https://stackoverflow.com/questions/41472049/502-bad-gateway-with-nginx-google-app-engine-node-js
+
+2.) https://github.com/GoogleCloudPlatform/google-cloud-visualstudio/issues/343
+
+yaml needed app.yaml should have env:flex not vm:true
+
+3.)https://stackoverflow.com/questions/65466859/error-the-requested-amount-of-instances-has-exceeded-gces-default-quota
+0
+
+
+If you just want to get through the deployment and don't care scaling, the following might help.
+
+try to delete all versions and instances as many as possible, and remember to repeat deletion multiple times because deletion might fail.
+in your app.yaml, limit the instance number to just 1 instance, and then try to deploy again.
+manual_scaling:
+  instances: 1
