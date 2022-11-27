@@ -1,0 +1,6 @@
+put app.yaml,     hello.go  in specific directory
+gcloud app deploy app.yaml       # right from that directory
+
+
+
+when complete - > disable billing account!!!!!1
