@@ -1,5 +1,45 @@
-put app.yaml,     hello.go  in specific directory
-gcloud app deploy app.yaml       # right from that directory
+
+
+
+Log on to google cloud   (http://cloud.google.com)
+
+
+#check billing
+#activate coulud shell
+
+sudo apt-get update
+sudo apt install golang-go
+
+#Create a project 
+
+#If prior user , select project
+gcloud projects list
+gcloud config set project <project-id>
+
+#“enable” billing  (“billing”=> manage billing accounts=> my projects (right side ‘3-dots’)
+
+#Open the terminal shell
+
+
+# start a new directory if you have prior projects and 'cd' to that directory
+
+git clone https://github.com/davidalfredostrowski/DeployGoWebServerToGCP
+
+
+cd <directory>
+
+gcloud app deploy app.yaml
+
+### start your web server
+
+go run hello.go
+
+### access the web sever from either 'curl' unix command or a separate web browser ( you need the dns generated from the 'web preview' icon )
+
+
+curl https://8080-cs-180656001232-default.cs-us-central1-pits.cloudshell.dev/?authuser=0&redirectedPreviously=true
+
+
 
 
 
