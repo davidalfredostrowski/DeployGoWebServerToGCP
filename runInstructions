@@ -34,13 +34,10 @@ gcloud app deploy app.yaml
 
 go run hello.go
 
-### access the web sever from either 'curl' unix command or a separate web browser ( you need the dns generated from the 'web preview' icon )
-
-
-curl https://8080-cs-180656001232-default.cs-us-central1-pits.cloudshell.dev/?authuser=0&redirectedPreviously=true
 
 
 
+video demo on youtube:
 
+https://youtu.be/wABKP-xOVGo
 
-when complete - > disable billing account!!!!!1
